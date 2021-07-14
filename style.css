@@ -11,11 +11,18 @@ body{
 }
 
 .button__primary{
-    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100% );
+    background-image: linear-gradient(to right, #ff512f 0%, rgba(241, 54, 54, 0.973) 51%, #dd2476 100%);
     color: #fff;
+    font-size: 18px;
+    font-weight: bold;
     padding: 12px;
     border: none;
     border-radius: 4px;
+    width: 120px;
+    cursor: pointer;
+}
+.button__primary:hover{
+    background-image: linear-gradient(to right, #e42179, #f77156, #ff512f);
 }
 
 .container{
@@ -25,10 +32,14 @@ body{
 }
 
 .navbar{
+    height: 72px;
+    position: sticky;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow-x: hidden;
+    background-color: rgb(252, 246, 252);
+    box-shadow: 0px 0px 15px rgb(162, 161, 163);
+    overflow-y: hidden;
 }
 .navbar__brand{
     width: 82px;
@@ -48,6 +59,21 @@ body{
     width: 100%;
 }
 
+.hero__text{
+    font-size: 30px;
+    color: #1d3557;
+    margin: 20px 0;
+}
+
+/*  Menu Styles */
+
+.food__menu__card{
+    width: 100%;
+}
+.food__image{
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .navbar{
         justify-content: space-between;
@@ -57,7 +83,7 @@ body{
         width: 150px;
     }
     .button__primary{
-        padding: 20px;
+        padding: 12px 20px;
         font-size: 20px;
     }
     .hero__container{
@@ -71,13 +97,15 @@ body{
 
 @media (min-width: 1020px){
     .container{
-        max-width: 1010px;
+        max-width: 900px;
     }
-    .hero__image__container{
-        width: 500px;
-        height: 300px;
+    .hero__text{
+        font-size: 45px;
+       
     }
 }
-@media (min-width: 1400px) {
-
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1100px;
+    }
 }
